@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('kode_barang')->unique();
             $table->string('nama_barang');
-            $table->foreignId('kategori_id')->constrained('kategoris')->onDelete('cascade');
+            $table->foreignId('kategori_id')->nullable()->constrained('kategoris')->nullOnDelete();
             $table->integer('stok');
             $table->decimal('harga', 10, 2);
             $table->date('tanggal_masuk');

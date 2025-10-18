@@ -41,7 +41,6 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>Nama</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -49,7 +48,6 @@
                             <tbody>
                                 @foreach ($Kategori as $kategori)
                                     <tr>
-                                        <td>{{ $kategori->id }}</td>
                                         <td>{{ $kategori->nama }}</td>
                                         <td>
                                             <a href="{{ route('kategori.show', $kategori) }}"

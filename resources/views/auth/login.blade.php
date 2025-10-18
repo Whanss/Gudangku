@@ -19,6 +19,12 @@
                     <p>Masuk ke akun Anda</p>
                 </div>
 
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
